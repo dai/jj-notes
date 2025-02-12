@@ -237,17 +237,17 @@
 
 #let jj-status = freeform-command(
   [jj status],
-  [Shows current and \ parent change, \ and file modifications.],
+  [現在の変更と親の変更、およびファイルの変更を表示します。],
 )
 
 #let jj-plain = freeform-command(
   [jj],
-  [Shows important changes \ in the repo.],
+  [リポジトリの重要な変更を表示します。],
 )
 
 #let jj-log = freeform-command(
   [jj log -r ..],
-  [Shows all changes \ in the repo.],
+  [リポジトリ内のすべての変更を表示します。],
 )
 
 // ~~~~~~~~~
@@ -290,7 +290,7 @@
     change("r", (0, 0), highlighted-bookmark: "feat/ui")
     change("q", (0, 4.8), highlighted-bookmark: "feat/api")
   },
-  [#text-highlight[] Prints all bookmarks.]
+  [#text-highlight[] すべてのブックマークを印刷します。]
 )
 
 // ~~~~~~~~~~~~
@@ -300,7 +300,7 @@
 #let jj-show = read-command(
   [jj show],
   change("r", (0, 0), working: true, highlighted-description: "edit foo"),
-  [#text-highlight[] Prints this change's description.]
+  [#text-highlight[] この変更の説明を印刷します。]
 )
 
 #let jj-describe = write-command(
@@ -385,7 +385,7 @@
     change("q", (1, 0), highlighted-files: 1)
     edge("r", "q")
   },
-  [#text-highlight[] Prints the diff between \ #text-files(1) and #text-files(2).]
+  [#text-highlight[] #text-files(1) と #text-files(2) の間の差分を印刷します。]
 )
 
 #let jj-restore = write-command(
@@ -438,7 +438,7 @@
 
 #let jj-undo = freeform-command(
   [jj undo],
-  [Undoes the last command.#h(-0.35em)],
+  [最後のコマンドを元に戻します。#h(-0.35em)],
 )
 
 // ~~~~~~
@@ -460,19 +460,19 @@
   )
 }
 #let legend = make-legend((
-  (canvas(node("r", (0, 0))), [a _change_]),
-  (working-glyph, [the _working change_ ("working copy revision")]),
-  (text-description("edit foo"), [a change's _description_]),
-  (text-bookmark("feat/ui"), [a _bookmark_]),
-  (text-files(1), [a state of the filesystem]),
-  (text-edit(1), [a change's diff]),
+  (canvas(node("r", (0, 0))), [変更]),
+  (working-glyph, [作業中の変更（作業コピーリビジョン）]),
+  (text-description("edit foo"), [変更の説明]),
+  (text-bookmark("feat/ui"), [ブックマーク]),
+  (text-files(1), [ファイルシステムの状態]),
+  (text-edit(1), [変更の差分]),
 ))
 
 // ~~~~~~~~~~~
 // Cheat Sheet
 // ~~~~~~~~~~~
 
-#align(center)[#text(font: "IBM Plex Sans")[= JJ Cheat Sheet]]
+#align(center)[#text(font: "IBM Plex Sans")[= JJ チートシート]]
 #v(1em)
 
 #let row(..args) = {
@@ -519,4 +519,4 @@
   legend,
 )
 
-#place(bottom + right, text-attribution[justinpombrio.net \ & lark.gay \ Feb 2025])
+#place(bottom + right, text-attribution[justinpombrio.net \ & lark.gay \ 2025年2月])
